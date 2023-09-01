@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <audio controls autoplay id="myAudio">
+        <source src="../audio/123_anh_yeu_em.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
     <div class="wrapper">
         <!-- <img src="../thư love.png" alt=""> -->
         <div class="formInput">
@@ -48,6 +52,19 @@
         <div class="boxLine">
             <div class="boxCar">
                 <img src="../image/car.gif" alt="">
+            </div>
+        </div>
+        <div class="boxHandsInput">
+            <div class="handsCatImgInput">
+                <img src="../image/handsCat.png" alt="">
+            </div>
+            <input type="text" id="inputField" placeholder="Nhập tên..." readonly>
+        </div>
+        <div class="buttonLove">
+            <div class="cricleBtn"></div>
+            <div class="button"></div>
+        </div>
+    </div>
             </div>
             <div class="boxHeart">
                 <div class="heart1"></div>
@@ -109,7 +126,7 @@
                     </div>
                     <div class="mewmew2">
                         <!-- <img src="../image/mewmew.gif" alt=""> -->
-                        <a href="../heart/index.html" class="button">Đọc xong rùi click vào đây nhé</a>
+                        <a href="../heart/index.html" class="button" target="_blank">Đọc xong rùi click vào đây nhé</a>
                     </div>
                 </div>
             </div>
@@ -244,7 +261,7 @@
     // chữ của thư bạn muốn gửi
     let indexTextContent = 0;
     let textLetterContent = document.querySelector('.contentLetter');
-    const textLetterP = "Cảm ơn cô gái đã giúp anh trở nên bận rộn hơn trong thời gian qua. Chúc cô ấy luôn vẻ, hạnh phúc và bình an.";
+    const textLetterP = "Cảm ơn cô gái đã giúp anh bận rộn hơn trong thời gian qua. Chúc em luôn giữ nụ cười trên môi, mạnh mẽ để vượt qua mọi khó khăn và sớm có được anh. <3<3";
     let timoutTextLetterContent;
     function textCharLetterContent(){
         if (indexTextContent < textLetterP.length) {
@@ -254,7 +271,6 @@
         }
         else{
             clearInterval(timoutTextLetterContent)
-
         }
     }
     function funcTimeoutLetterContent(){
